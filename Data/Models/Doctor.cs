@@ -7,13 +7,17 @@ using System.Threading.Tasks;
 
 namespace Data.Models
 {
-    public class Doctor
+    public class Doctor : BaseUser
     {
-        public Doctor(int id, string name, string doctorType)
+        public Doctor()
         {
-            Id=id;
+        }
+        public Doctor(string email, string username, string password, string name, string doctorType)
+            : base(email, username, password)
+        {
             Name=name;
             DoctorType=doctorType;
+            this.MedicalReviews = new List<MedicalReview>();
         }
 
         public int Id { get; set; }
@@ -23,5 +27,7 @@ namespace Data.Models
 
         [Required]
         public string DoctorType { get; set; }
+
+        public virtual ICollection<MedicalReview> MedicalReviews { get; set; }
     }
 }
