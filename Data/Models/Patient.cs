@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Data.Models
 {
@@ -12,20 +7,15 @@ namespace Data.Models
         public Patient()
         {
         }
-        public Patient(string email, string username, string password, string name, int age, string egn, int? roomId)
-            : base(email, username, password)
+        public Patient(string email, string username, string password, string name, int age, string egn, string phone)
+            : base(email, username, password, phone, name)
         {
-            this.Name = name;
             this.Age = age;
             this.EGN = egn;
-            this.RoomId = roomId;
             this.Diagnoses = new List<Diagnose>();
         }
 
         public int Id { get; set; }
-
-        [Required]
-        public string Name { get; set; }
 
         [Required]
         public int Age { get; set; }

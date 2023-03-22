@@ -4,6 +4,7 @@
     {
         public Room()
         {
+            this.Taken = false;
         }
 
         public int Id { get; set; }

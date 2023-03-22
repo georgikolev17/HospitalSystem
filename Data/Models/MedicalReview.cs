@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Data.Models
 {
@@ -12,11 +7,10 @@ namespace Data.Models
         public MedicalReview()
         {
         }
-        public MedicalReview(int patientId, int doctorId, int diagnoseId, DateTime date)
+        public MedicalReview(int patientId, int doctorId, DateTime date)
         {
             PatientId=patientId;
             DoctorId=doctorId;
-            DiagnoseId=diagnoseId;
             Date=date;
         }
 
@@ -30,8 +24,7 @@ namespace Data.Models
         public int DoctorId { get; set; }
         public virtual Doctor Doctor { get; set; }
 
-        [Required]
-        public int DiagnoseId { get; set; }
+        public int? DiagnoseId { get; set; }
         public virtual Diagnose Diagnose { get; set; }
 
         [Required]
