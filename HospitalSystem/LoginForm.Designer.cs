@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             panel1 = new Panel();
+            button2 = new Button();
             label4 = new Label();
             button1 = new Button();
             label3 = new Label();
@@ -37,7 +38,6 @@
             label2 = new Label();
             textBox1 = new TextBox();
             label1 = new Label();
-            button2 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -58,6 +58,19 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(395, 471);
             panel1.TabIndex = 0;
+            // 
+            // button2
+            // 
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = Color.MediumTurquoise;
+            button2.Location = new Point(219, 385);
+            button2.Name = "button2";
+            button2.Size = new Size(83, 37);
+            button2.TabIndex = 7;
+            button2.Text = "Sign Up";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // label4
             // 
@@ -148,18 +161,6 @@
             label1.TabIndex = 0;
             label1.Text = "LOG IN";
             label1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // button2
-            // 
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.MediumTurquoise;
-            button2.Location = new Point(219, 385);
-            button2.Name = "button2";
-            button2.Size = new Size(83, 37);
-            button2.TabIndex = 7;
-            button2.Text = "Sign Up";
-            button2.UseVisualStyleBackColor = true;
             // 
             // LoginForm
             // 

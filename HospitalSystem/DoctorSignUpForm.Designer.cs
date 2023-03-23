@@ -306,7 +306,5 @@
         private Label label8;
         private TextBox textBox6;
         private Button button1;
-        private TextBox textBox3;
-        private Label label4;
     }
 }

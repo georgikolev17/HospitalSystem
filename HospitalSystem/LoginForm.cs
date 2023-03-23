@@ -55,7 +55,12 @@ namespace HospitalSystem
 
         private void label4_Click(object sender, EventArgs e)
         {
-            SignupForm signupForm = new SignupForm();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var signupForm = new RegistrationForm();
             signupForm.ShowDialog();
             this.Close();
         }
