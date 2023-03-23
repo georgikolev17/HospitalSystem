@@ -35,8 +35,8 @@ namespace Business
 
         public BaseUser? GetUserById(int userId)
         {
-            var doctor = this.dbContext.Doctors.FirstOrDefault(x => x.Id == userId);
-            var patient = this.dbContext.Patients.FirstOrDefault(x => x.Id == userId);
+            var doctor = this.dbContext.Doctors.FirstOrDefault(x => x.DoctorId == userId);
+            var patient = this.dbContext.Patients.FirstOrDefault(x => x.PatientId == userId);
 
             if (doctor == null && patient == null)
             {

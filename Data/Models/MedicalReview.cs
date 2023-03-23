@@ -9,12 +9,12 @@ namespace Data.Models
         }
         public MedicalReview(int patientId, int doctorId, DateTime date)
         {
-            PatientId=patientId;
-            DoctorId=doctorId;
-            Date=date;
+            PatientId = patientId;
+            DoctorId = doctorId;
+            Date = date;
         }
 
-        public int Id { get; set; }
+        public int MedicalReviewId { get; set; }
 
         [Required]
         public int PatientId { get; set; }

@@ -17,7 +17,7 @@ namespace Data.Models
             this.Address=address;
         }
 
-        public int Id { get; set; }
+        public int PatientId { get; set; }
 
         [Required]
         public int Age { get; set; }

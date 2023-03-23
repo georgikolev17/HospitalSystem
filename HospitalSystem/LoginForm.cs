@@ -14,6 +14,8 @@ namespace HospitalSystem
             var dbContext = new ApplicationDbContext();
             dbContext.Database.EnsureDeleted();
             dbContext.Database.EnsureCreated();
+            var userName = textBox1.Text;
+            var password = textBox2.Text;
         }
 
         private void textBox1_Enter(object sender, EventArgs e)
@@ -64,5 +66,7 @@ namespace HospitalSystem
             signupForm.ShowDialog();
             this.Close();
         }
+
+
     }
 }

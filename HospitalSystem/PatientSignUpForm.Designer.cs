@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientSignUpForm));
             panel1 = new Panel();
+            label12 = new Label();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -52,7 +53,6 @@
             comboBox1 = new ComboBox();
             comboBox2 = new ComboBox();
             button1 = new Button();
-            label12 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -64,6 +64,17 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1016, 105);
             panel1.TabIndex = 0;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.ForeColor = Color.White;
+            label12.Location = new Point(295, 35);
+            label12.Name = "label12";
+            label12.Size = new Size(423, 38);
+            label12.TabIndex = 0;
+            label12.Text = "PATIENT REGISTRATION FORM";
             // 
             // label1
             // 
@@ -238,6 +249,7 @@
             // 
             maskedTextBox1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             maskedTextBox1.Location = new Point(191, 407);
+            maskedTextBox1.Mask = "(999) 000-0000";
             maskedTextBox1.Name = "maskedTextBox1";
             maskedTextBox1.Size = new Size(279, 31);
             maskedTextBox1.TabIndex = 18;
@@ -246,9 +258,11 @@
             // 
             maskedTextBox2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             maskedTextBox2.Location = new Point(704, 407);
+            maskedTextBox2.Mask = "0000000000";
             maskedTextBox2.Name = "maskedTextBox2";
             maskedTextBox2.Size = new Size(227, 31);
             maskedTextBox2.TabIndex = 19;
+            maskedTextBox2.ValidatingType = typeof(int);
             // 
             // comboBox1
             // 
@@ -279,17 +293,7 @@
             button1.TabIndex = 22;
             button1.Text = "Sign Up";
             button1.UseVisualStyleBackColor = true;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label12.ForeColor = Color.White;
-            label12.Location = new Point(295, 35);
-            label12.Name = "label12";
-            label12.Size = new Size(423, 38);
-            label12.TabIndex = 0;
-            label12.Text = "PATIENT REGISTRATION FORM";
+            button1.Click += button1_Click;
             // 
             // PatientSignUpForm
             // 

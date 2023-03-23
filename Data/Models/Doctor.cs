@@ -10,11 +10,11 @@ namespace Data.Models
         public Doctor(string email, string username, string password, string name, string doctorType, string phone)
             : base(email, username, password, phone, name)
         {
-            DoctorType=doctorType;
+            DoctorType = doctorType;
             this.MedicalReviews = new List<MedicalReview>();
         }
 
-        public int Id { get; set; }
+        public int DoctorId { get; set; }
 
         [Required]
         public string DoctorType { get; set; }

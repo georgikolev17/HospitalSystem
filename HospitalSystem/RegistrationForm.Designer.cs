@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationForm));
             panel1 = new Panel();
-            label1 = new Label();
-            button1 = new Button();
             button2 = new Button();
+            button1 = new Button();
+            label1 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -47,17 +47,18 @@
             panel1.Size = new Size(478, 317);
             panel1.TabIndex = 0;
             // 
-            // label1
+            // button2
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.MediumTurquoise;
-            label1.Location = new Point(54, 41);
-            label1.Name = "label1";
-            label1.Size = new Size(371, 38);
-            label1.TabIndex = 1;
-            label1.Text = "REGISTRATION FORM";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = Color.MediumTurquoise;
+            button2.Location = new Point(54, 206);
+            button2.Name = "button2";
+            button2.Size = new Size(371, 52);
+            button2.TabIndex = 3;
+            button2.Text = "PATIENT";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -70,18 +71,19 @@
             button1.TabIndex = 2;
             button1.Text = "DOCTOR";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // button2
+            // label1
             // 
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.MediumTurquoise;
-            button2.Location = new Point(54, 206);
-            button2.Name = "button2";
-            button2.Size = new Size(371, 52);
-            button2.TabIndex = 3;
-            button2.Text = "PATIENT";
-            button2.UseVisualStyleBackColor = true;
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.MediumTurquoise;
+            label1.Location = new Point(54, 41);
+            label1.Name = "label1";
+            label1.Size = new Size(371, 38);
+            label1.TabIndex = 1;
+            label1.Text = "REGISTRATION FORM";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // RegistrationForm
             // 

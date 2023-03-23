@@ -36,10 +36,10 @@
             textBox1 = new TextBox();
             label3 = new Label();
             textBox2 = new TextBox();
-            this.label4 = new Label();
+            label4 = new Label();
             maskedTextBox1 = new MaskedTextBox();
             label5 = new Label();
-            this.textBox3 = new TextBox();
+            textBox3 = new TextBox();
             label6 = new Label();
             comboBox1 = new ComboBox();
             label7 = new Label();
@@ -123,14 +123,14 @@
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            this.label4.ForeColor = Color.MediumTurquoise;
-            this.label4.Location = new Point(39, 363);
-            this.label4.Name = "label4";
-            this.label4.Size = new Size(105, 25);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Telephone:";
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.MediumTurquoise;
+            label4.Location = new Point(39, 363);
+            label4.Name = "label4";
+            label4.Size = new Size(105, 25);
+            label4.TabIndex = 18;
+            label4.Text = "Telephone:";
             // 
             // maskedTextBox1
             // 
@@ -154,11 +154,11 @@
             // 
             // textBox3
             // 
-            this.textBox3.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            this.textBox3.Location = new Point(679, 204);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new Size(151, 31);
-            this.textBox3.TabIndex = 21;
+            textBox3.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox3.Location = new Point(679, 204);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(151, 31);
+            textBox3.TabIndex = 21;
             // 
             // label6
             // 
@@ -249,6 +249,7 @@
             button1.TabIndex = 30;
             button1.Text = "Sign Up";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // DoctorSignUpForm
             // 
@@ -265,10 +266,10 @@
             Controls.Add(label7);
             Controls.Add(comboBox1);
             Controls.Add(label6);
-            Controls.Add(this.textBox3);
+            Controls.Add(textBox3);
             Controls.Add(label5);
             Controls.Add(maskedTextBox1);
-            Controls.Add(this.label4);
+            Controls.Add(label4);
             Controls.Add(textBox2);
             Controls.Add(label3);
             Controls.Add(textBox1);
