@@ -15,7 +15,7 @@ namespace Data.Models
             this.Diagnoses = new List<Diagnose>();
         }
 
-        public int Id { get; set; }
+        public int PatientId { get; set; }
 
         [Required]
         public int Age { get; set; }
