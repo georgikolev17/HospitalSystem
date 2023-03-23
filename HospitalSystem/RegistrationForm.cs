@@ -16,5 +16,19 @@ namespace HospitalSystem
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var doctorSignupForm = new DoctorSignUpForm();
+            doctorSignupForm.ShowDialog();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var patientSignupForm = new PatientSignUpForm();
+            patientSignupForm.ShowDialog();
+            this.Close();
+        }
     }
 }
