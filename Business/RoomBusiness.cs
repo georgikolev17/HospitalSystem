@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Business
 {
-    internal class RoomBusiness : IRoomBusiness
+    public class RoomBusiness : IRoomBusiness
     {
         private ApplicationDbContext dbContext;
         public RoomBusiness()
