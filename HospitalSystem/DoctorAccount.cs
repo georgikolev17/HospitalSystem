@@ -32,6 +32,11 @@ namespace HospitalSystem
             label14.Text = doctor.DoctorType;
         }
 
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var loginPage = new LoginForm();
+            loginPage.Show();
+            this.Close();
+        }
     }
 }

@@ -29,282 +29,293 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoctorAccount));
-            panel1 = new Panel();
-            label11 = new Label();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
-            label12 = new Label();
-            label13 = new Label();
-            label14 = new Label();
-            dataGridView1 = new DataGridView();
-            label15 = new Label();
-            button1 = new Button();
-            Name = new DataGridViewTextBoxColumn();
-            Date = new DataGridViewTextBoxColumn();
-            View = new DataGridViewButtonColumn();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.View = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.label15 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.PaleTurquoise;
-            panel1.Controls.Add(label11);
-            panel1.Location = new Point(-7, -7);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1038, 96);
-            panel1.TabIndex = 3;
+            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Location = new System.Drawing.Point(-6, -5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(908, 72);
+            this.panel1.TabIndex = 3;
             // 
             // label11
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.ForeColor = Color.White;
-            label11.Location = new Point(407, 28);
-            label11.Name = "label11";
-            label11.Size = new Size(201, 38);
-            label11.TabIndex = 0;
-            label11.Text = "MY ACCOUNT";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(356, 21);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(158, 30);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "MY ACCOUNT";
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.MediumTurquoise;
-            label1.Location = new Point(-108, 82);
-            label1.Name = "label1";
-            label1.Size = new Size(1230, 25);
-            label1.TabIndex = 4;
-            label1.Text = "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.MediumTurquoise;
+            this.label1.Location = new System.Drawing.Point(-94, 62);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1053, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "---------------------------------------------------------------------------------" +
+    "--------------------------------------------------------------------------------" +
+    "-------------";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.MediumTurquoise;
-            label2.Location = new Point(93, 145);
-            label2.Name = "label2";
-            label2.Size = new Size(67, 25);
-            label2.TabIndex = 5;
-            label2.Text = "Name:";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.MediumTurquoise;
+            this.label2.Location = new System.Drawing.Point(81, 109);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 20);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Name:";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.MediumTurquoise;
-            label3.Location = new Point(90, 207);
-            label3.Name = "label3";
-            label3.Size = new Size(70, 25);
-            label3.TabIndex = 17;
-            label3.Text = "E-mail:";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.MediumTurquoise;
+            this.label3.Location = new System.Drawing.Point(79, 155);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 20);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "E-mail:";
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = Color.MediumTurquoise;
-            label4.Location = new Point(55, 269);
-            label4.Name = "label4";
-            label4.Size = new Size(105, 25);
-            label4.TabIndex = 19;
-            label4.Text = "Telephone:";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.MediumTurquoise;
+            this.label4.Location = new System.Drawing.Point(48, 202);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(85, 20);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Telephone:";
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = Color.MediumTurquoise;
-            label5.Location = new Point(607, 145);
-            label5.Name = "label5";
-            label5.Size = new Size(51, 25);
-            label5.TabIndex = 21;
-            label5.Text = "Age:";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.MediumTurquoise;
+            this.label5.Location = new System.Drawing.Point(531, 109);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(41, 20);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Age:";
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = Color.MediumTurquoise;
-            label6.Location = new Point(578, 207);
-            label6.Name = "label6";
-            label6.Size = new Size(80, 25);
-            label6.TabIndex = 23;
-            label6.Text = "Gender:";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.MediumTurquoise;
+            this.label6.Location = new System.Drawing.Point(506, 155);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 20);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Gender:";
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = Color.MediumTurquoise;
-            label7.Location = new Point(559, 269);
-            label7.Name = "label7";
-            label7.Size = new Size(99, 25);
-            label7.TabIndex = 25;
-            label7.Text = "Speciality:";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.MediumTurquoise;
+            this.label7.Location = new System.Drawing.Point(489, 202);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(79, 20);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "Speciality:";
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(185, 145);
-            label8.Name = "label8";
-            label8.Size = new Size(59, 25);
-            label8.TabIndex = 26;
-            label8.Text = "label8";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(162, 109);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(50, 20);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "label8";
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(185, 207);
-            label9.Name = "label9";
-            label9.Size = new Size(59, 25);
-            label9.TabIndex = 27;
-            label9.Text = "label9";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(162, 155);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(50, 20);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "label9";
             // 
             // label10
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(185, 269);
-            label10.Name = "label10";
-            label10.Size = new Size(69, 25);
-            label10.TabIndex = 28;
-            label10.Text = "label10";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(162, 202);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(58, 20);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "label10";
             // 
             // label12
             // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(689, 145);
-            label12.Name = "label12";
-            label12.Size = new Size(69, 25);
-            label12.TabIndex = 29;
-            label12.Text = "label12";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(603, 109);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(58, 20);
+            this.label12.TabIndex = 29;
+            this.label12.Text = "label12";
             // 
             // label13
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(689, 207);
-            label13.Name = "label13";
-            label13.Size = new Size(69, 25);
-            label13.TabIndex = 30;
-            label13.Text = "label13";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(603, 155);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(58, 20);
+            this.label13.TabIndex = 30;
+            this.label13.Text = "label13";
             // 
             // label14
             // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(689, 269);
-            label14.Name = "label14";
-            label14.Size = new Size(69, 25);
-            label14.TabIndex = 31;
-            label14.Text = "label14";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label14.Location = new System.Drawing.Point(603, 202);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(58, 20);
+            this.label14.TabIndex = 31;
+            this.label14.Text = "label14";
             // 
             // dataGridView1
             // 
-            dataGridView1.BackgroundColor = Color.PaleTurquoise;
-            dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Name, Date, View });
-            dataGridView1.Location = new Point(29, 382);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(953, 194);
-            dataGridView1.TabIndex = 32;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label15.ForeColor = Color.MediumTurquoise;
-            label15.Location = new Point(366, 339);
-            label15.Name = "label15";
-            label15.Size = new Size(261, 31);
-            label15.TabIndex = 33;
-            label15.Text = "NEXT APPOINTMENTS:";
-            // 
-            // button1
-            // 
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.MediumTurquoise;
-            button1.Location = new Point(366, 604);
-            button1.Name = "button1";
-            button1.Size = new Size(261, 55);
-            button1.TabIndex = 34;
-            button1.Text = "Log Out";
-            button1.UseVisualStyleBackColor = true;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.PaleTurquoise;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Name,
+            this.Date,
+            this.View});
+            this.dataGridView1.Location = new System.Drawing.Point(25, 286);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.Size = new System.Drawing.Size(834, 146);
+            this.dataGridView1.TabIndex = 32;
             // 
             // Name
             // 
-            Name.HeaderText = "Name";
-            Name.MinimumWidth = 6;
-            Name.Name = "Name";
-            Name.Resizable = DataGridViewTriState.False;
-            Name.Width = 300;
+            this.Name.HeaderText = "Name";
+            this.Name.MinimumWidth = 6;
+            this.Name.Name = "Name";
+            this.Name.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Name.Width = 300;
             // 
             // Date
             // 
-            Date.HeaderText = "Date";
-            Date.MinimumWidth = 6;
-            Date.Name = "Date";
-            Date.Resizable = DataGridViewTriState.False;
-            Date.Width = 300;
+            this.Date.HeaderText = "Date";
+            this.Date.MinimumWidth = 6;
+            this.Date.Name = "Date";
+            this.Date.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Date.Width = 300;
             // 
             // View
             // 
-            View.HeaderText = "";
-            View.MinimumWidth = 6;
-            View.Name = "View";
-            View.Resizable = DataGridViewTriState.False;
-            View.Width = 300;
+            this.View.HeaderText = "";
+            this.View.MinimumWidth = 6;
+            this.View.Name = "View";
+            this.View.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.View.Width = 300;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.ForeColor = System.Drawing.Color.MediumTurquoise;
+            this.label15.Location = new System.Drawing.Point(320, 254);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(218, 25);
+            this.label15.TabIndex = 33;
+            this.label15.Text = "NEXT APPOINTMENTS:";
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.MediumTurquoise;
+            this.button1.Location = new System.Drawing.Point(320, 453);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(228, 41);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "Log Out";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // DoctorAccount
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            ClientSize = new Size(1004, 690);
-            Controls.Add(button1);
-            Controls.Add(label15);
-            Controls.Add(dataGridView1);
-            Controls.Add(label14);
-            Controls.Add(label13);
-            Controls.Add(label12);
-            Controls.Add(label10);
-            Controls.Add(label9);
-            Controls.Add(label8);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(panel1);
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            MaximizeBox = false;
-            MinimizeBox = false;
-            Name = "DoctorAccount";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "HMS | My Account";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(878, 518);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            //this.Name = "DoctorAccount";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "HMS | My Account";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
