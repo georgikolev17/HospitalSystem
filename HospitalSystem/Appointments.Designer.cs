@@ -39,6 +39,9 @@
             label5 = new Label();
             label3 = new Label();
             button1 = new Button();
+            Speciality = new DataGridViewTextBoxColumn();
+            DoctorName = new DataGridViewTextBoxColumn();
+            Choose = new DataGridViewButtonColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -90,11 +93,12 @@
             dataGridView1.BackgroundColor = Color.PaleTurquoise;
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(32, 392);
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Speciality, DoctorName, Choose });
+            dataGridView1.Location = new Point(23, 394);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(942, 126);
+            dataGridView1.Size = new Size(960, 126);
             dataGridView1.TabIndex = 6;
             // 
             // textBox1
@@ -159,6 +163,29 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // Speciality
+            // 
+            Speciality.HeaderText = "Speciality";
+            Speciality.MinimumWidth = 6;
+            Speciality.Name = "Speciality";
+            Speciality.Width = 300;
+            // 
+            // DoctorName
+            // 
+            DoctorName.HeaderText = "Doctor Name";
+            DoctorName.MinimumWidth = 6;
+            DoctorName.Name = "DoctorName";
+            DoctorName.Width = 300;
+            // 
+            // Choose
+            // 
+            Choose.HeaderText = "Choose";
+            Choose.MinimumWidth = 6;
+            Choose.Name = "Choose";
+            Choose.Text = "Choose";
+            Choose.UseColumnTextForButtonValue = true;
+            Choose.Width = 300;
+            // 
             // Appointments
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -200,5 +227,8 @@
         private Label label5;
         private Label label3;
         private Button button1;
+        private DataGridViewTextBoxColumn Speciality;
+        private DataGridViewTextBoxColumn DoctorName;
+        private DataGridViewButtonColumn Choose;
     }
 }

@@ -47,6 +47,9 @@
             dataGridView1 = new DataGridView();
             label15 = new Label();
             button1 = new Button();
+            Name = new DataGridViewTextBoxColumn();
+            Date = new DataGridViewTextBoxColumn();
+            View = new DataGridViewButtonColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -213,11 +216,12 @@
             dataGridView1.BackgroundColor = Color.PaleTurquoise;
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(42, 373);
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Name, Date, View });
+            dataGridView1.Location = new Point(29, 382);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(923, 194);
+            dataGridView1.Size = new Size(953, 194);
             dataGridView1.TabIndex = 32;
             // 
             // label15
@@ -242,6 +246,30 @@
             button1.TabIndex = 34;
             button1.Text = "Log Out";
             button1.UseVisualStyleBackColor = true;
+            // 
+            // Name
+            // 
+            Name.HeaderText = "Name";
+            Name.MinimumWidth = 6;
+            Name.Name = "Name";
+            Name.Resizable = DataGridViewTriState.False;
+            Name.Width = 300;
+            // 
+            // Date
+            // 
+            Date.HeaderText = "Date";
+            Date.MinimumWidth = 6;
+            Date.Name = "Date";
+            Date.Resizable = DataGridViewTriState.False;
+            Date.Width = 300;
+            // 
+            // View
+            // 
+            View.HeaderText = "";
+            View.MinimumWidth = 6;
+            View.Name = "View";
+            View.Resizable = DataGridViewTriState.False;
+            View.Width = 300;
             // 
             // DoctorAccount
             // 
@@ -299,5 +327,8 @@
         private DataGridView dataGridView1;
         private Label label15;
         private Button button1;
+        private DataGridViewTextBoxColumn Name;
+        private DataGridViewTextBoxColumn Date;
+        private DataGridViewButtonColumn View;
     }
 }
