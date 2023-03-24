@@ -34,7 +34,6 @@
             label11 = new Label();
             label2 = new Label();
             dataGridView1 = new DataGridView();
-            comboBox1 = new ComboBox();
             textBox1 = new TextBox();
             maskedTextBox1 = new MaskedTextBox();
             label5 = new Label();
@@ -98,15 +97,6 @@
             dataGridView1.Size = new Size(942, 126);
             dataGridView1.TabIndex = 6;
             // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(329, 537);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(354, 33);
-            comboBox1.TabIndex = 7;
-            // 
             // textBox1
             // 
             textBox1.BorderStyle = BorderStyle.FixedSingle;
@@ -161,7 +151,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.MediumTurquoise;
-            button1.Location = new Point(377, 595);
+            button1.Location = new Point(376, 567);
             button1.Name = "button1";
             button1.Size = new Size(266, 65);
             button1.TabIndex = 14;
@@ -181,7 +171,6 @@
             Controls.Add(label5);
             Controls.Add(maskedTextBox1);
             Controls.Add(textBox1);
-            Controls.Add(comboBox1);
             Controls.Add(dataGridView1);
             Controls.Add(label2);
             Controls.Add(panel1);
@@ -206,7 +195,6 @@
         private Label label11;
         private Label label2;
         private DataGridView dataGridView1;
-        private ComboBox comboBox1;
         private TextBox textBox1;
         private MaskedTextBox maskedTextBox1;
         private Label label5;

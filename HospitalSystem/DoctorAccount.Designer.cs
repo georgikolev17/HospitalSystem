@@ -46,8 +46,6 @@
             label14 = new Label();
             dataGridView1 = new DataGridView();
             label15 = new Label();
-            label16 = new Label();
-            textBox1 = new TextBox();
             button1 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -89,7 +87,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.MediumTurquoise;
-            label2.Location = new Point(50, 170);
+            label2.Location = new Point(93, 145);
             label2.Name = "label2";
             label2.Size = new Size(67, 25);
             label2.TabIndex = 5;
@@ -100,7 +98,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.MediumTurquoise;
-            label3.Location = new Point(47, 254);
+            label3.Location = new Point(90, 207);
             label3.Name = "label3";
             label3.Size = new Size(70, 25);
             label3.TabIndex = 17;
@@ -111,7 +109,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.MediumTurquoise;
-            label4.Location = new Point(12, 334);
+            label4.Location = new Point(55, 269);
             label4.Name = "label4";
             label4.Size = new Size(105, 25);
             label4.TabIndex = 19;
@@ -122,7 +120,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.MediumTurquoise;
-            label5.Location = new Point(66, 412);
+            label5.Location = new Point(607, 145);
             label5.Name = "label5";
             label5.Size = new Size(51, 25);
             label5.TabIndex = 21;
@@ -133,7 +131,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.MediumTurquoise;
-            label6.Location = new Point(37, 501);
+            label6.Location = new Point(578, 207);
             label6.Name = "label6";
             label6.Size = new Size(80, 25);
             label6.TabIndex = 23;
@@ -144,7 +142,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = Color.MediumTurquoise;
-            label7.Location = new Point(18, 584);
+            label7.Location = new Point(559, 269);
             label7.Name = "label7";
             label7.Size = new Size(99, 25);
             label7.TabIndex = 25;
@@ -154,7 +152,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(137, 170);
+            label8.Location = new Point(185, 145);
             label8.Name = "label8";
             label8.Size = new Size(59, 25);
             label8.TabIndex = 26;
@@ -164,7 +162,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(137, 254);
+            label9.Location = new Point(185, 207);
             label9.Name = "label9";
             label9.Size = new Size(59, 25);
             label9.TabIndex = 27;
@@ -174,7 +172,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(137, 334);
+            label10.Location = new Point(185, 269);
             label10.Name = "label10";
             label10.Size = new Size(69, 25);
             label10.TabIndex = 28;
@@ -184,7 +182,7 @@
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(137, 412);
+            label12.Location = new Point(689, 145);
             label12.Name = "label12";
             label12.Size = new Size(69, 25);
             label12.TabIndex = 29;
@@ -194,7 +192,7 @@
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(137, 501);
+            label13.Location = new Point(689, 207);
             label13.Name = "label13";
             label13.Size = new Size(69, 25);
             label13.TabIndex = 30;
@@ -204,7 +202,7 @@
             // 
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(137, 584);
+            label14.Location = new Point(689, 269);
             label14.Name = "label14";
             label14.Size = new Size(69, 25);
             label14.TabIndex = 31;
@@ -215,11 +213,11 @@
             dataGridView1.BackgroundColor = Color.PaleTurquoise;
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(414, 377);
+            dataGridView1.Location = new Point(42, 373);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(561, 232);
+            dataGridView1.Size = new Size(923, 194);
             dataGridView1.TabIndex = 32;
             // 
             // label15
@@ -227,41 +225,22 @@
             label15.AutoSize = true;
             label15.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label15.ForeColor = Color.MediumTurquoise;
-            label15.Location = new Point(561, 334);
+            label15.Location = new Point(366, 339);
             label15.Name = "label15";
             label15.Size = new Size(261, 31);
             label15.TabIndex = 33;
             label15.Text = "NEXT APPOINTMENTS:";
             // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label16.ForeColor = Color.MediumTurquoise;
-            label16.Location = new Point(586, 147);
-            label16.Name = "label16";
-            label16.Size = new Size(204, 31);
-            label16.TabIndex = 34;
-            label16.Text = "SEARCH PATIENT:";
-            // 
-            // textBox1
-            // 
-            textBox1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(481, 190);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(406, 31);
-            textBox1.TabIndex = 35;
-            // 
             // button1
             // 
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.MediumTurquoise;
-            button1.Location = new Point(572, 239);
+            button1.Location = new Point(366, 604);
             button1.Name = "button1";
-            button1.Size = new Size(231, 52);
-            button1.TabIndex = 36;
-            button1.Text = "SEARCH";
+            button1.Size = new Size(261, 55);
+            button1.TabIndex = 34;
+            button1.Text = "Log Out";
             button1.UseVisualStyleBackColor = true;
             // 
             // DoctorAccount
@@ -271,8 +250,6 @@
             BackColor = Color.White;
             ClientSize = new Size(1004, 690);
             Controls.Add(button1);
-            Controls.Add(textBox1);
-            Controls.Add(label16);
             Controls.Add(label15);
             Controls.Add(dataGridView1);
             Controls.Add(label14);
@@ -321,8 +298,6 @@
         private Label label14;
         private DataGridView dataGridView1;
         private Label label15;
-        private Label label16;
-        private TextBox textBox1;
         private Button button1;
     }
 }

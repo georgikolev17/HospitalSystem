@@ -53,6 +53,7 @@
             dataGridView2 = new DataGridView();
             label20 = new Label();
             button1 = new Button();
+            button2 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
@@ -289,7 +290,7 @@
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
             dataGridView2.RowTemplate.Height = 29;
-            dataGridView2.Size = new Size(980, 105);
+            dataGridView2.Size = new Size(980, 92);
             dataGridView2.TabIndex = 22;
             // 
             // label20
@@ -308,7 +309,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.MediumTurquoise;
-            button1.Location = new Point(318, 704);
+            button1.Location = new Point(165, 702);
             button1.Name = "button1";
             button1.Size = new Size(346, 63);
             button1.TabIndex = 24;
@@ -316,12 +317,25 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // button2
+            // 
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = Color.MediumTurquoise;
+            button2.Location = new Point(554, 702);
+            button2.Name = "button2";
+            button2.Size = new Size(261, 63);
+            button2.TabIndex = 35;
+            button2.Text = "Log Out";
+            button2.UseVisualStyleBackColor = true;
+            // 
             // PatientAccount
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1004, 791);
+            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label20);
             Controls.Add(dataGridView2);
@@ -386,5 +400,6 @@
         private DataGridView dataGridView2;
         private Label label20;
         private Button button1;
+        private Button button2;
     }
 }
