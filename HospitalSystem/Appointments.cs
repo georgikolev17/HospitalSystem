@@ -21,7 +21,7 @@ namespace HospitalSystem
         {
             var userAppointment = textBox1.Text;
             var dateForAppointment = maskedTextBox1.Text;
-            var doctorForAppointment=comboBox1.Text;
+            var doctorForAppointment = comboBox1.Text;
 
             var patientAccount = new PatientAccount();
             patientAccount.ShowDialog();
