@@ -30,13 +30,12 @@ namespace HospitalSystem
             var patientAge = int.Parse(textBox4.Text);
             var patientGender = comboBox1.Text;
             var patientBloodType = comboBox2.Text;
-            var egn = maskedTextBox2.Text;
             var patientUsername = textBox5.Text;
             var patientPassword = textBox6.Text;
             var patientEgn = maskedTextBox2.Text;
             try
             {
-                this.usersBusiness.RegisterNewPatient(patientEmail, patientUsername, patientPassword, patientName, patientAge, patientEgn, patientPhone, patientBloodType, address);
+                this.usersBusiness.RegisterNewPatient(patientEmail, patientUsername, patientPassword, patientName, patientAge, patientEgn, patientPhone, patientBloodType, address, patientGender);
                 var patient = this.usersBusiness.LoginUser(patientEmail, patientPassword);
                 // TODO : Show patient account page
             }

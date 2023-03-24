@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Data.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,25 @@ namespace HospitalSystem
 {
     public partial class PatientAccount : Form
     {
-        public PatientAccount()
+        private Patient patient;
+
+        public PatientAccount(Patient patient)
         {
             InitializeComponent();
+            this.patient=patient;
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            label10.Text = patient.Name;
+            label12.Text = patient.Address;
+            label13.Text = patient.Email;
+            label14.Text = patient.PhoneNumber;
+            label15.Text = patient.Age.ToString();
+            label16.Text = patient.Gender;
+            label17.Text = patient.BloodType;
+            label18.Text = patient.EGN;
         }
 
         private void PatientMenu_Load(object sender, EventArgs e)

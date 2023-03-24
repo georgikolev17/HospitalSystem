@@ -7,13 +7,14 @@ namespace Data.Models
         public BaseUser()
         {
         }
-        protected BaseUser(string email, string username, string password, string phoneNumber, string name)
+        protected BaseUser(string email, string username, string password, string phoneNumber, string name, UserType userType)
         {
             this.Email = email;
             this.Username = username;
             this.Password = password;
             this.PhoneNumber = phoneNumber;
             this.Name = name;
+            this.UserType=userType;
         }
 
         [Required]
@@ -30,6 +31,8 @@ namespace Data.Models
 
         [Required]
         public string PhoneNumber { get; set; }
+
+        public UserType UserType { get; set; }
 
     }
 }

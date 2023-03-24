@@ -23,7 +23,7 @@ namespace HospitalSystem
             var dateForAppointment = maskedTextBox1.Text;
             var doctorForAppointment=comboBox1.Text;
 
-            var patientAccount = new PatientAccount();
+            var patientAccount = new Appointments();
             patientAccount.ShowDialog();
             this.Close();
         }

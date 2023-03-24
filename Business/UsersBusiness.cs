@@ -83,7 +83,7 @@ namespace Business
             return patient;
         }
 
-        public void RegisterNewDoctor(string email, string username, string password, string name, string doctorType, string phone)
+        public void RegisterNewDoctor(string email, string username, string password, string name, string doctorType, string phone, string gender, int age)
         {
             using ApplicationDbContext dbContext = new ApplicationDbContext();
 
@@ -91,11 +91,11 @@ namespace Business
             {
                 throw new Exception("User with such email already exists!");
             }
-            dbContext.Doctors.Add(new Doctor(email, username, password, name, doctorType, phone));
+            dbContext.Doctors.Add(new Doctor(email, username, password, name, doctorType, phone, gender, age));
             dbContext.SaveChanges();
         }
 
-        public void RegisterNewPatient(string email, string username, string password, string name, int age, string egn, string phone, string bloodType, string address)
+        public void RegisterNewPatient(string email, string username, string password, string name, int age, string egn, string phone, string bloodType, string address, string gender)
         {
             using ApplicationDbContext dbContext = new ApplicationDbContext();
 
@@ -103,7 +103,7 @@ namespace Business
             {
                 throw new Exception("User with such email already exists!");
             }
-            dbContext.Patients.Add(new Patient(email, username, password, name, age, egn, phone, bloodType, address));
+            dbContext.Patients.Add(new Patient(email, username, password, name, age, egn, phone, bloodType, address, gender));
             dbContext.SaveChanges();
         }
     }

@@ -28,7 +28,7 @@ namespace HospitalSystem
             var doctortName = textBox1.Text;
             var doctorEmail = textBox2.Text;
             var doctorPhone = maskedTextBox1.Text;
-            var doctorAge = textBox3.Text;
+            var doctorAge = int.Parse(textBox3.Text);
             var doctorGender = comboBox1.Text;
             var speciality = textBox4.Text;
             var doctorUsername = textBox5.Text;
@@ -36,7 +36,7 @@ namespace HospitalSystem
 
             try
             {
-                this.usersBusiness.RegisterNewDoctor(doctorEmail, doctorUsername, doctorPassword, doctortName, speciality, doctorPhone);
+                this.usersBusiness.RegisterNewDoctor(doctorEmail, doctorUsername, doctorPassword, doctortName, speciality, doctorPhone, doctorGender, doctorAge);
                 var doctor = this.usersBusiness.LoginUser(doctorEmail, doctorPassword);
                 var doctorAccountPage = new DoctorAccount(doctor as Doctor);
                 doctorAccountPage.ShowDialog();
@@ -46,6 +46,11 @@ namespace HospitalSystem
             {
                 throw;
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
