@@ -24,7 +24,7 @@ namespace HospitalSystem
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Username")
+            if (textBox1.Text == "Email")
             {
                 textBox1.Text = "";
             }
@@ -34,7 +34,7 @@ namespace HospitalSystem
         {
             if (textBox1.Text == "")
             {
-                textBox1.Text = "Username";
+                textBox1.Text = "Email";
             }
         }
 
@@ -43,6 +43,7 @@ namespace HospitalSystem
             if (textBox2.Text == "Password")
             {
                 textBox2.Text = "";
+                textBox2.PasswordChar = '*';
             }
         }
 
@@ -51,6 +52,7 @@ namespace HospitalSystem
             if (textBox2.Text == "")
             {
                 textBox2.Text = "Password";
+                textBox2.PasswordChar = '\0';
             }
         }
 
