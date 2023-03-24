@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Business;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace HospitalSystem
 {
     public partial class PatientSignUpForm : Form
     {
+        private readonly IUsersBusiness usersBusiness;
+
         public PatientSignUpForm()
         {
             InitializeComponent();
+            this.usersBusiness=new UsersBusiness();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -23,16 +27,23 @@ namespace HospitalSystem
             var address = textBox2.Text;
             var patientEmail = textBox3.Text;
             var patientPhone = maskedTextBox1.Text;
-            var patientAge = textBox4.Text;
+            var patientAge = int.Parse(textBox4.Text);
             var patientGender = comboBox1.Text;
             var patientBloodType = comboBox2.Text;
             var egn = maskedTextBox2.Text;
             var patientUsername = textBox5.Text;
             var patientPassword = textBox6.Text;
-
-            var patientAccount = new PatientAccount();
-            patientAccount.ShowDialog();
-            this.Close();
+            var patientEgn = maskedTextBox2.Text;
+            try
+            {
+                this.usersBusiness.RegisterNewPatient(patientEmail, patientUsername, patientPassword, patientName, patientAge, patientEgn, patientPhone, patientBloodType, address);
+                var patient = this.usersBusiness.LoginUser(patientEmail, patientPassword);
+                // TODO : Show patient account page
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
         }
     }
 }

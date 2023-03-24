@@ -7,10 +7,11 @@ namespace Data.Models
         public Diagnose()
         {
         }
-        public Diagnose(int patientId, string illnessDescription)
+        public Diagnose(int patientId, string illnessDescription, string prescription)
         {
             this.PatientId = patientId;
             this.IllnessDescription = illnessDescription;
+            this.Prescription = prescription;
         }
 
         public int DiagnoseId { get; set; }
@@ -21,5 +22,7 @@ namespace Data.Models
 
         [Required]
         public string IllnessDescription { get; set; }
+
+        public string Prescription { get; set; }
     }
 }
