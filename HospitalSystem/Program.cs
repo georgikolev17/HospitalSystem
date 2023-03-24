@@ -12,8 +12,8 @@ namespace HospitalSystem
         {
             // Set up the database
             var db = new ApplicationDbContext();
-            await db.Database.EnsureDeletedAsync();
-            await db.Database.EnsureCreatedAsync();
+            // await db.Database.EnsureDeletedAsync();
+            // await db.Database.EnsureCreatedAsync();
 
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.

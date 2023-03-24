@@ -12,5 +12,9 @@ namespace Business
         public BaseUser? GetUserByEmail(string email);
 
         public BaseUser? GetUserById(int userId);
+
+        public Patient? FindPatientByName(string name);
+
+        public Doctor? FindDoctorByName(string name);
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Data.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace HospitalSystem
 {
     public partial class DoctorAccount : Form
     {
-        public DoctorAccount()
+        public DoctorAccount(Doctor doctor)
         {
             InitializeComponent();
         }

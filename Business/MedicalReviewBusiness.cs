@@ -1,10 +1,12 @@
 ﻿using Data;
 using Data.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Business
 {
@@ -22,6 +24,16 @@ namespace Business
             }
             dbContext.Add(new MedicalReview(patientId, doctorId, date));
             dbContext.SaveChanges();
+        }
+
+        public ICollection<MedicalReview> GetPastMedicalReviewsForPatient(int patientId)
+        {
+            using ApplicationDbContext dbContext = new ApplicationDbContext();
+
+            return dbContext.MedicalReviews
+                .Include(x => x.Doctor)
+                .Where(x => x.Date < DateTime.Now && patientId == x.PatientId)
+                .ToList();
         }
 
         public ICollection<MedicalReview> GetUpcomingMedicalReviewsForDoctor(string email)

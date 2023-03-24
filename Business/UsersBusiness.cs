@@ -14,6 +14,20 @@ namespace Business
         {
         }
 
+        public Doctor? FindDoctorByName(string name)
+        {
+            using ApplicationDbContext dbContext = new ApplicationDbContext();
+
+            return dbContext.Doctors.FirstOrDefault(x => x.Name == name);
+        }
+
+        public Patient? FindPatientByName(string name)
+        {
+            using ApplicationDbContext dbContext = new ApplicationDbContext();
+
+            return dbContext.Patients.FirstOrDefault(x => x.Name == name);
+        }
+
         public BaseUser? GetUserByEmail(string email)
         {
             using ApplicationDbContext dbContext = new ApplicationDbContext();
