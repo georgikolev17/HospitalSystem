@@ -98,7 +98,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(960, 126);
+            dataGridView1.Size = new Size(951, 126);
             dataGridView1.TabIndex = 6;
             // 
             // textBox1
