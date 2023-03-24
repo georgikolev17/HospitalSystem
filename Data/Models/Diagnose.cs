@@ -9,11 +9,11 @@ namespace Data.Models
         }
         public Diagnose(int patientId, string illnessDescription)
         {
-            this.PatientId=patientId;
-            this.IllnessDescription=illnessDescription;
+            this.PatientId = patientId;
+            this.IllnessDescription = illnessDescription;
         }
 
-        public int Id { get; set; }
+        public int DiagnoseId { get; set; }
 
         [Required]
         public int PatientId { get; set; }

@@ -9,12 +9,13 @@ namespace Data.Models
         }
         protected BaseUser(string email, string username, string password, string phoneNumber, string name)
         {
-            this.Email=email;
-            this.Username=username;
-            this.Password=password;
-            this.PhoneNumber=phoneNumber;
-            this.Name=name;
+            this.Email = email;
+            this.Username = username;
+            this.Password = password;
+            this.PhoneNumber = phoneNumber;
+            this.Name = name;
         }
+
         [Required]
         public string Email { get; set; }
 

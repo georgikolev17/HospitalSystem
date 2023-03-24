@@ -7,7 +7,7 @@
             this.Taken = false;
         }
 
-        public int Id { get; set; }
+        public int RoomId { get; set; }
 
         public bool Taken { get; set; }
 
