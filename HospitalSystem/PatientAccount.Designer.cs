@@ -1,6 +1,6 @@
 ﻿namespace HospitalSystem
 {
-    partial class PatientMenu
+    partial class PatientAccount
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientMenu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientAccount));
             panel1 = new Panel();
             label11 = new Label();
             label1 = new Label();
@@ -51,6 +51,8 @@
             dataGridView1 = new DataGridView();
             label19 = new Label();
             dataGridView2 = new DataGridView();
+            label20 = new Label();
+            button1 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
@@ -260,11 +262,11 @@
             dataGridView1.BackgroundColor = Color.PaleTurquoise;
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 399);
+            dataGridView1.Location = new Point(12, 372);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(980, 171);
+            dataGridView1.Size = new Size(980, 153);
             dataGridView1.TabIndex = 20;
             // 
             // label19
@@ -272,7 +274,7 @@
             label19.AutoSize = true;
             label19.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label19.ForeColor = Color.MediumTurquoise;
-            label19.Location = new Point(393, 355);
+            label19.Location = new Point(404, 338);
             label19.Name = "label19";
             label19.Size = new Size(178, 31);
             label19.TabIndex = 21;
@@ -283,19 +285,45 @@
             dataGridView2.BackgroundColor = Color.PaleTurquoise;
             dataGridView2.BorderStyle = BorderStyle.None;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(12, 593);
+            dataGridView2.Location = new Point(12, 578);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
             dataGridView2.RowTemplate.Height = 29;
-            dataGridView2.Size = new Size(980, 65);
+            dataGridView2.Size = new Size(980, 105);
             dataGridView2.TabIndex = 22;
             // 
-            // PatientMenu
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label20.ForeColor = Color.MediumTurquoise;
+            label20.Location = new Point(404, 544);
+            label20.Name = "label20";
+            label20.Size = new Size(186, 31);
+            label20.TabIndex = 23;
+            label20.Text = "HOSPITAL STAY:";
+            // 
+            // button1
+            // 
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.MediumTurquoise;
+            button1.Location = new Point(318, 704);
+            button1.Name = "button1";
+            button1.Size = new Size(346, 63);
+            button1.TabIndex = 24;
+            button1.Text = "MAKE NEW APPOINTMENT";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // PatientAccount
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1004, 690);
+            ClientSize = new Size(1004, 791);
+            Controls.Add(button1);
+            Controls.Add(label20);
             Controls.Add(dataGridView2);
             Controls.Add(label19);
             Controls.Add(dataGridView1);
@@ -320,7 +348,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "PatientMenu";
+            Name = "PatientAccount";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "HMS | My Account";
             Load += PatientMenu_Load;
@@ -356,5 +384,7 @@
         private DataGridView dataGridView1;
         private Label label19;
         private DataGridView dataGridView2;
+        private Label label20;
+        private Button button1;
     }
 }

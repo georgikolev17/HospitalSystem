@@ -16,5 +16,7 @@ namespace HospitalSystem
         {
             InitializeComponent();
         }
+
+
     }
 }

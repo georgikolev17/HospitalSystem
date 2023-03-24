@@ -10,22 +10,21 @@ using System.Windows.Forms;
 
 namespace HospitalSystem
 {
-    public partial class PatientAccount : Form
+    public partial class Appointments : Form
     {
-        public PatientAccount()
+        public Appointments()
         {
             InitializeComponent();
         }
 
-        private void PatientMenu_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            var appointment = new Appointments();
-            appointment.ShowDialog();
+            var userAppointment = textBox1.Text;
+            var dateForAppointment = maskedTextBox1.Text;
+            var doctorForAppointment=comboBox1.Text;
+
+            var patientAccount = new PatientAccount();
+            patientAccount.ShowDialog();
             this.Close();
         }
     }

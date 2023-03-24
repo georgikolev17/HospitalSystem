@@ -29,6 +29,10 @@ namespace HospitalSystem
             var egn = maskedTextBox2.Text;
             var patientUsername = textBox5.Text;
             var patientPassword = textBox6.Text;
+
+            var patientAccount = new PatientAccount();
+            patientAccount.ShowDialog();
+            this.Close();
         }
     }
 }
