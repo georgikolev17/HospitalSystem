@@ -23,7 +23,7 @@ namespace HospitalSystem
             InitializeComponent();
             this.usersBusiness = new UsersBusiness();
             this.medicalReviewsBusiness = new MedicalReviewBusiness();
-            this.patient=patient;
+            this.patient = patient;
         }
 
         protected override void OnLoad(EventArgs e)
@@ -36,10 +36,10 @@ namespace HospitalSystem
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            var dateForAppointment = DateTime.ParseExact(maskedTextBox1.Text, "dd.MM.yyyy HH:mm",
+            var dateForAppointment = DateTime.ParseExact(maskedTextBox1.Text, "dd/MM/yyyy HH:mm",
                                        System.Globalization.CultureInfo.InvariantCulture); ;
             var doctorForAppointment = comboBox1.Text;
-            if (dateForAppointment != null  && doctorForAppointment != null)
+            if (dateForAppointment != null && doctorForAppointment != null)
             {
                 try
                 {
@@ -49,7 +49,7 @@ namespace HospitalSystem
                 catch (Exception ex)
                 {
                 }
-                
+
             }
             this.Dispose();
         }
