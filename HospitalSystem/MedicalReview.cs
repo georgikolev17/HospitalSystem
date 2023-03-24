@@ -22,7 +22,7 @@ namespace HospitalSystem
         public MedicalReview(Data.Models.MedicalReview medicalReview)
         {
             InitializeComponent();
-            this.medicalReview=medicalReview;
+            this.medicalReview = medicalReview;
             this.roomBusiness = new RoomBusiness();
             this.medicalReviewsBusiness = new MedicalReviewBusiness();
         }
