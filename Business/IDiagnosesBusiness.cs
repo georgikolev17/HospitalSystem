@@ -6,6 +6,6 @@ namespace Business
     {
         public ICollection<Diagnose> GetDiagnosesForPatient(int patientId);
 
-        public void CreateDiagnose(int patientId, string illnessDescription, string prescription);
+        public Diagnose CreateDiagnose(int patientId, string illnessDescription, string prescription);
     }
 }

@@ -10,14 +10,23 @@ namespace Business
 {
     public class RoomBusiness : IRoomBusiness
     {
+        private readonly IUsersBusiness usersBusiness;
         public RoomBusiness()
         {
+            usersBusiness = new UsersBusiness();
         }
         public void CreateNewRoom()
         {
             using ApplicationDbContext dbContext = new ApplicationDbContext();
             dbContext.Rooms.Add(new Room());
             dbContext.SaveChanges();
+        }
+
+        public ICollection<Room> GetAllFreeRooms(int patientId)
+        {
+            using ApplicationDbContext dbContext = new ApplicationDbContext();
+            var rooms = dbContext.Rooms.Where(x => x.Taken == false || x.PatientId == patientId).ToList();
+            return rooms;
         }
 
         public Patient? GetPatientInRoom(int patientId, int roomId)
@@ -30,7 +39,14 @@ namespace Business
             {
                 return null;
             }
+            dbContext.SaveChanges();
             return patient;
+        }
+
+        public int? GetPatientRoom(int patientId)
+        {
+            using ApplicationDbContext dbContext = new ApplicationDbContext();
+            return dbContext.Rooms.FirstOrDefault(x => x.PatientId == patientId)?.RoomId;
         }
 
         public void GivePatientRoom(int patientId, int roomId)
@@ -41,6 +57,14 @@ namespace Business
             if (room.Taken == true)
             {
                 throw new Exception("Room already taken!");
+            }
+            var oldRoom = GetPatientRoom(patientId);
+            if (oldRoom != null) 
+            {
+                var r = dbContext.Rooms.FirstOrDefault(x => x.RoomId == oldRoom);
+                r.PatientId = null;
+                r.Patient = null;
+                room.Taken = false;
             }
             room.Patient = dbContext.Patients.FirstOrDefault(x => x.PatientId == patientId);
             room.PatientId = patientId;

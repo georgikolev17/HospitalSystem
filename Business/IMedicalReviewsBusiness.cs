@@ -12,5 +12,9 @@ namespace Business
         public ICollection<MedicalReview> GetUpcomingMedicalReviewsForDoctor(string email);
 
         public ICollection<MedicalReview> GetPastMedicalReviewsForPatient(int patientId);
+
+        public MedicalReview? FindMedicalReview(int doctorId, int patientId);
+
+        public void EditMedicalReview(int id, string diagnose, string prescription, int patientId);
     }
 }

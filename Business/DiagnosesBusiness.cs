@@ -16,7 +16,7 @@ namespace Business
         {
             usersBusiness = new UsersBusiness();
         }
-        public void CreateDiagnose(int patientId, string illnessDescription, string prescription)
+        public Diagnose CreateDiagnose(int patientId, string illnessDescription, string prescription)
         {
             using ApplicationDbContext dbContext = new ApplicationDbContext();
 
@@ -24,7 +24,10 @@ namespace Business
             {
                 throw new Exception("The patient you want to create diagnose for does not exists.");
             }
-            dbContext.Diagnoses.Add(new Diagnose(patientId, illnessDescription, prescription));
+            var diagnose = new Diagnose(patientId, illnessDescription, prescription);
+            dbContext.Diagnoses.Add(diagnose);
+            dbContext.SaveChanges();
+            return diagnose;
         }
 
         public ICollection<Diagnose> GetDiagnosesForPatient(int patientId)

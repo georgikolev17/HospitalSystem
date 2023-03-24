@@ -41,9 +41,15 @@ namespace HospitalSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var appointment = new Appointments();
+            var appointment = new Appointments(patient);
             appointment.ShowDialog();
-            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var loginForm = new LoginForm();
+            this.Dispose();
+            loginForm.ShowDialog();
         }
     }
 }

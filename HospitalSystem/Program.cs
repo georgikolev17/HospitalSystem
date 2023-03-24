@@ -1,4 +1,6 @@
+using Business;
 using Data;
+using System.Runtime.CompilerServices;
 
 namespace HospitalSystem
 {
@@ -12,6 +14,11 @@ namespace HospitalSystem
         {
             // Set up the database
             var db = new ApplicationDbContext();
+            /*var roomBusiness = new RoomBusiness();
+            for (int i = 0; i < 10; i++)
+            {
+                roomBusiness.CreateNewRoom();
+            }*/
             // await db.Database.EnsureDeletedAsync();
             await db.Database.EnsureCreatedAsync();
 

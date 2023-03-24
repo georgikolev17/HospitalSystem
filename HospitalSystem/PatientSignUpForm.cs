@@ -1,4 +1,5 @@
 ﻿using Business;
+using Data.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,7 +38,7 @@ namespace HospitalSystem
             {
                 this.usersBusiness.RegisterNewPatient(patientEmail, patientUsername, patientPassword, patientName, patientAge, patientEgn, patientPhone, patientBloodType, address, patientGender);
                 var patient = this.usersBusiness.LoginUser(patientEmail, patientPassword);
-                // TODO : Show patient account page
+                var patientAccount = new PatientAccount(patient as Patient);
             }
             catch (Exception ex)
             {

@@ -66,7 +66,7 @@ namespace HospitalSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Dispose();
             var signupForm = new RegistrationForm();
             signupForm.ShowDialog();
         }
@@ -82,13 +82,13 @@ namespace HospitalSystem
                 if (user.UserType == UserType.Patient)
                 {
                     var patientAccount = new PatientAccount(user as Patient);
-                    this.Close();
+                    this.Dispose();
                     patientAccount.ShowDialog();
                 }
                 else
                 {
                     var doctorAccount = new DoctorAccount(user as Doctor);
-                    this.Close();
+                    this.Dispose();
                     doctorAccount.ShowDialog();
                 }
             }

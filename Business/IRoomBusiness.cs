@@ -11,5 +11,9 @@ namespace Business
         public void RemovePatientFromRoom(int patientId,  int roomId);
 
         public Patient? GetPatientInRoom(int patientId, int roomId);
+
+        public ICollection<Room> GetAllFreeRooms(int patientId);
+
+        public int? GetPatientRoom(int patientId);
     }
 }

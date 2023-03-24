@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Business;
+using Data.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,20 +14,44 @@ namespace HospitalSystem
 {
     public partial class Appointments : Form
     {
-        public Appointments()
+        private readonly IUsersBusiness usersBusiness;
+        private readonly IMedicalReviewsBusiness medicalReviewsBusiness;
+        private readonly Patient patient;
+
+        public Appointments(Patient patient)
         {
             InitializeComponent();
+            this.usersBusiness = new UsersBusiness();
+            this.medicalReviewsBusiness = new MedicalReviewBusiness();
+            this.patient=patient;
         }
 
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            foreach (var name in this.usersBusiness.GetAllDoctorNames())
+            {
+                comboBox1.Items.Add(name);
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
-            // var userAppointment = textBox1.Text;
-            // var dateForAppointment = maskedTextBox1.Text;
-            // var doctorForAppointment = comboBox1.Text;
-
-            var patientAccount = new Appointments();
-            patientAccount.ShowDialog();
-            this.Close();
+            var dateForAppointment = DateTime.ParseExact(maskedTextBox1.Text, "dd.MM.yyyy HH:mm",
+                                       System.Globalization.CultureInfo.InvariantCulture); ;
+            var doctorForAppointment = comboBox1.Text;
+            if (dateForAppointment != null  && doctorForAppointment != null)
+            {
+                try
+                {
+                    this.medicalReviewsBusiness.BookMedicalReview(this.patient.PatientId, usersBusiness.FindDoctorByName(doctorForAppointment).DoctorId, dateForAppointment);
+                    this.Dispose();
+                }
+                catch (Exception ex)
+                {
+                }
+                
+            }
+            this.Dispose();
         }
     }
 }

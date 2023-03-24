@@ -28,6 +28,15 @@ namespace Business
             return dbContext.Patients.FirstOrDefault(x => x.Name == name);
         }
 
+        public ICollection<string> GetAllDoctorNames()
+        {
+            using ApplicationDbContext dbContext = new ApplicationDbContext();
+            return dbContext.Doctors
+                .OrderBy(x => x.Name)
+                .Select(x => x.Name)
+                .ToList();
+        }
+
         public BaseUser? GetUserByEmail(string email)
         {
             using ApplicationDbContext dbContext = new ApplicationDbContext();

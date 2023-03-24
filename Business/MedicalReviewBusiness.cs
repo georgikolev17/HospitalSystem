@@ -12,8 +12,10 @@ namespace Business
 {
     public class MedicalReviewBusiness : IMedicalReviewsBusiness
     {
+        private readonly IDiagnosesBusiness diagnosesBusiness;
         public MedicalReviewBusiness()
         {
+            this.diagnosesBusiness = new DiagnosesBusiness();
         }
         public void BookMedicalReview(int patientId, int doctorId, DateTime date)
         {
@@ -24,6 +26,26 @@ namespace Business
             }
             dbContext.Add(new MedicalReview(patientId, doctorId, date));
             dbContext.SaveChanges();
+        }
+
+        public void EditMedicalReview(int id, string diagnose, string prescription, int patientId)
+        {
+            using ApplicationDbContext dbContext = new ApplicationDbContext();
+            var medicalReview = dbContext.MedicalReviews
+                .Include(x => x.Diagnose)
+                .FirstOrDefault(x => x.MedicalReviewId == id);
+            var newDiagnose = this.diagnosesBusiness.CreateDiagnose(patientId, diagnose, prescription);
+            medicalReview.DiagnoseId = newDiagnose.DiagnoseId;
+            dbContext.SaveChanges();
+        }
+
+        public MedicalReview? FindMedicalReview(int doctorId, int patientId)
+        {
+            using ApplicationDbContext dbContext = new ApplicationDbContext();
+            return dbContext.MedicalReviews
+                .Include(x => x.Diagnose)
+                .Include(x => x.Patient)
+                .FirstOrDefault(x => x.DoctorId == doctorId && x.PatientId == patientId);
         }
 
         public ICollection<MedicalReview> GetPastMedicalReviewsForPatient(int patientId)
@@ -44,6 +66,7 @@ namespace Business
             var doctor = dbContext.Doctors.FirstOrDefault(x => x.Email == email);
             ICollection<MedicalReview> upcomingreviews = dbContext.MedicalReviews
                 .Where(x => x.Date >= today && x.DoctorId == doctor.DoctorId)
+                .Include(x => x.Patient)
                 .ToList();
             return upcomingreviews;
         }

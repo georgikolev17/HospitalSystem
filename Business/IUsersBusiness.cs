@@ -16,5 +16,7 @@ namespace Business
         public Patient? FindPatientByName(string name);
 
         public Doctor? FindDoctorByName(string name);
+
+        public ICollection<string> GetAllDoctorNames();
     }
 }
