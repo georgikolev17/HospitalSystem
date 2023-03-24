@@ -97,6 +97,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "RegistrationForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "HMS | Sign Up";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

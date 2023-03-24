@@ -25,7 +25,7 @@ namespace HospitalSystem
             var doctorPhone = maskedTextBox1.Text;
             var doctorAge = textBox3.Text;
             var doctorGender = comboBox1.Text;
-            var speciality=textBox4.Text;
+            var speciality = textBox4.Text;
             var doctorUsername = textBox5.Text;
             var doctorPassword = textBox6.Text;
         }

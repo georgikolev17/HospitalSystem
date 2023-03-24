@@ -277,7 +277,10 @@
             Controls.Add(label1);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "DoctorSignUpForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "HMS | Sign Up";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

@@ -22,13 +22,13 @@ namespace HospitalSystem
             var patientName = textBox1.Text;
             var address = textBox2.Text;
             var patientEmail = textBox3.Text;
-            var patientPhone= maskedTextBox1.Text;
-            var patientAge=textBox4.Text;
+            var patientPhone = maskedTextBox1.Text;
+            var patientAge = textBox4.Text;
             var patientGender = comboBox1.Text;
-            var patientBloodType=comboBox2.Text;
-            var egn=maskedTextBox2.Text;
-            var patientUsername=textBox5.Text;
-            var patientPassword=textBox6.Text;
+            var patientBloodType = comboBox2.Text;
+            var egn = maskedTextBox2.Text;
+            var patientUsername = textBox5.Text;
+            var patientPassword = textBox6.Text;
         }
     }
 }
