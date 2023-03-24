@@ -19,9 +19,9 @@ namespace HospitalSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var userAppointment = textBox1.Text;
-            var dateForAppointment = maskedTextBox1.Text;
-            var doctorForAppointment = comboBox1.Text;
+            // var userAppointment = textBox1.Text;
+            // var dateForAppointment = maskedTextBox1.Text;
+            // var doctorForAppointment = comboBox1.Text;
 
             var patientAccount = new Appointments();
             patientAccount.ShowDialog();
