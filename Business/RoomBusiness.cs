@@ -10,20 +10,21 @@ namespace Business
 {
     public class RoomBusiness : IRoomBusiness
     {
-        private ApplicationDbContext dbContext;
         public RoomBusiness()
         {
-            this.dbContext = new ApplicationDbContext();
         }
         public void CreateNewRoom()
         {
-            this.dbContext.Rooms.Add(new Room());
-            this.dbContext.SaveChanges();
+            using ApplicationDbContext dbContext = new ApplicationDbContext();
+            dbContext.Rooms.Add(new Room());
+            dbContext.SaveChanges();
         }
 
         public Patient? GetPatientInRoom(int patientId, int roomId)
         {
-            var patient = this.dbContext.Patients.FirstOrDefault(x => x.PatientId == patientId && x.RoomId == roomId);
+            using ApplicationDbContext dbContext = new ApplicationDbContext();
+
+            var patient = dbContext.Patients.FirstOrDefault(x => x.PatientId == patientId && x.RoomId == roomId);
 
             if (patient == null)
             {
@@ -34,20 +35,23 @@ namespace Business
 
         public void GivePatientRoom(int patientId, int roomId)
         {
-            var room = this.dbContext.Rooms.FirstOrDefault(x => x.RoomId == roomId);
+            using ApplicationDbContext dbContext = new ApplicationDbContext();
+
+            var room = dbContext.Rooms.FirstOrDefault(x => x.RoomId == roomId);
             if (room.Taken == true)
             {
                 throw new Exception("Room already taken!");
             }
-            room.Patient = this.dbContext.Patients.FirstOrDefault(x => x.PatientId == patientId);
+            room.Patient = dbContext.Patients.FirstOrDefault(x => x.PatientId == patientId);
             room.PatientId = patientId;
             room.Taken = true;
-            this.dbContext.SaveChanges();
+            dbContext.SaveChanges();
         }
 
         public void RemovePatientFromRoom(int patientId, int roomId)
         {
-            var room = this.dbContext.Rooms.FirstOrDefault(x => x.RoomId == roomId);
+            using ApplicationDbContext dbContext = new ApplicationDbContext();
+            var room = dbContext.Rooms.FirstOrDefault(x => x.RoomId == roomId);
             if (room.Taken == false)
             {
                 throw new Exception("Room is already free!");
@@ -55,7 +59,7 @@ namespace Business
             room.Patient = null;
             room.PatientId = null;
             room.Taken = false;
-            this.dbContext.SaveChanges();
+            dbContext.SaveChanges();
         }
     }
 }

@@ -4,8 +4,8 @@ namespace Business
 {
     public interface IDiagnosesBusiness
     {
-        public ICollection<Diagnose> GetDiagnosesForPatient(string email);
+        public ICollection<Diagnose> GetDiagnosesForPatient(int patientId);
 
-        public void CreateDiagnose(int patientId, string illnessDescription);
+        public void CreateDiagnose(int patientId, string illnessDescription, string prescription);
     }
 }

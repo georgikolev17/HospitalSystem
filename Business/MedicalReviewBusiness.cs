@@ -10,26 +10,27 @@ namespace Business
 {
     public class MedicalReviewBusiness : IMedicalReviewsBusiness
     {
-        private ApplicationDbContext dbContext;
         public MedicalReviewBusiness()
         {
-            this.dbContext = new ApplicationDbContext();
         }
         public void BookMedicalReview(int patientId, int doctorId, DateTime date)
         {
+            using ApplicationDbContext dbContext = new ApplicationDbContext();
             if (IsDoctorFreeOnDate(doctorId, date) == false) 
             {
                 throw new Exception("Doctor not free on date!");
             }
-            this.dbContext.Add(new MedicalReview(patientId, doctorId, date));
-            this.dbContext.SaveChanges();
+            dbContext.Add(new MedicalReview(patientId, doctorId, date));
+            dbContext.SaveChanges();
         }
 
         public ICollection<MedicalReview> GetUpcomingMedicalReviewsForDoctor(string email)
         {
+            using ApplicationDbContext dbContext = new ApplicationDbContext();
+
             DateTime today = DateTime.Now;
-            var doctor = this.dbContext.Doctors.FirstOrDefault(x => x.Email == email);
-            ICollection<MedicalReview> upcomingreviews = this.dbContext.MedicalReviews
+            var doctor = dbContext.Doctors.FirstOrDefault(x => x.Email == email);
+            ICollection<MedicalReview> upcomingreviews = dbContext.MedicalReviews
                 .Where(x => x.Date >= today && x.DoctorId == doctor.DoctorId)
                 .ToList();
             return upcomingreviews;
@@ -37,7 +38,9 @@ namespace Business
 
         public bool IsDoctorFreeOnDate(int doctorId, DateTime date)
         {
-            var medicalreview = this.dbContext.MedicalReviews.FirstOrDefault(x => x.DoctorId == doctorId && x.Date == date);
+            using ApplicationDbContext dbContext = new ApplicationDbContext();
+
+            var medicalreview = dbContext.MedicalReviews.FirstOrDefault(x => x.DoctorId == doctorId && x.Date == date);
 
             if (medicalreview == null) 
             {
