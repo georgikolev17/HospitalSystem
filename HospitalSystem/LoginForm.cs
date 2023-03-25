@@ -81,6 +81,7 @@ namespace HospitalSystem
             try
             {
                 var user = this.usersBusiness.LoginUser(email, password);
+                MessageBox.Show("Login was successful!");
                 if (user.UserType == UserType.Patient)
                 {
                     var patientAccount = new PatientAccount(user as Patient);
@@ -96,7 +97,7 @@ namespace HospitalSystem
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
         }
 

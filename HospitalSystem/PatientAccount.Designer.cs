@@ -53,13 +53,14 @@
             button1=new Button();
             button2=new Button();
             dataGridView3=new DataGridView();
+            Diagnose=new DataGridViewTextBoxColumn();
+            Date=new DataGridViewTextBoxColumn();
+            Doctor=new DataGridViewTextBoxColumn();
             dataGridView1=new DataGridView();
             dataGridViewTextBoxColumn2=new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn3=new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn1=new DataGridViewTextBoxColumn();
-            Diagnose=new DataGridViewTextBoxColumn();
-            Date=new DataGridViewTextBoxColumn();
-            Doctor=new DataGridViewTextBoxColumn();
+            button3=new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -68,6 +69,7 @@
             // panel1
             // 
             panel1.BackColor=Color.PaleTurquoise;
+            panel1.Controls.Add(button3);
             panel1.Controls.Add(label11);
             panel1.Location=new Point(-8, -12);
             panel1.Name="panel1";
@@ -327,6 +329,30 @@
             dataGridView3.TabIndex=36;
             dataGridView3.CellContentClick+=dataGridView3_CellContentClick;
             // 
+            // Diagnose
+            // 
+            Diagnose.HeaderText="Diagnose";
+            Diagnose.MinimumWidth=6;
+            Diagnose.Name="Diagnose";
+            Diagnose.Width=300;
+            // 
+            // Date
+            // 
+            Date.HeaderText="Date";
+            Date.MinimumWidth=6;
+            Date.Name="Date";
+            Date.Resizable=DataGridViewTriState.False;
+            Date.Width=300;
+            // 
+            // Doctor
+            // 
+            Doctor.HeaderText="Doctor";
+            Doctor.MinimumWidth=6;
+            Doctor.Name="Doctor";
+            Doctor.Resizable=DataGridViewTriState.False;
+            Doctor.SortMode=DataGridViewColumnSortMode.NotSortable;
+            Doctor.Width=300;
+            // 
             // dataGridView1
             // 
             dataGridView1.BackgroundColor=Color.PaleTurquoise;
@@ -365,29 +391,18 @@
             dataGridViewTextBoxColumn1.Name="dataGridViewTextBoxColumn1";
             dataGridViewTextBoxColumn1.Width=300;
             // 
-            // Diagnose
+            // button3
             // 
-            Diagnose.HeaderText="Diagnose";
-            Diagnose.MinimumWidth=6;
-            Diagnose.Name="Diagnose";
-            Diagnose.Width=300;
-            // 
-            // Date
-            // 
-            Date.HeaderText="Date";
-            Date.MinimumWidth=6;
-            Date.Name="Date";
-            Date.Resizable=DataGridViewTriState.False;
-            Date.Width=300;
-            // 
-            // Doctor
-            // 
-            Doctor.HeaderText="Doctor";
-            Doctor.MinimumWidth=6;
-            Doctor.Name="Doctor";
-            Doctor.Resizable=DataGridViewTriState.False;
-            Doctor.SortMode=DataGridViewColumnSortMode.NotSortable;
-            Doctor.Width=300;
+            button3.FlatStyle=FlatStyle.Flat;
+            button3.Font=new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor=Color.White;
+            button3.Location=new Point(875, 33);
+            button3.Name="button3";
+            button3.Size=new Size(115, 46);
+            button3.TabIndex=38;
+            button3.Text="Refresh";
+            button3.UseVisualStyleBackColor=true;
+            button3.Click+=button3_Click;
             // 
             // PatientAccount
             // 
@@ -467,5 +482,6 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private Button button3;
     }
 }

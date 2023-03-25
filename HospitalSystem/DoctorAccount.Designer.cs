@@ -50,6 +50,7 @@
             View=new DataGridViewButtonColumn();
             label15=new Label();
             button1=new Button();
+            button3=new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -57,6 +58,7 @@
             // panel1
             // 
             panel1.BackColor=Color.PaleTurquoise;
+            panel1.Controls.Add(button3);
             panel1.Controls.Add(label11);
             panel1.Location=new Point(-7, -7);
             panel1.Name="panel1";
@@ -273,6 +275,19 @@
             button1.UseVisualStyleBackColor=true;
             button1.Click+=button1_Click;
             // 
+            // button3
+            // 
+            button3.FlatStyle=FlatStyle.Flat;
+            button3.Font=new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor=Color.White;
+            button3.Location=new Point(874, 25);
+            button3.Name="button3";
+            button3.Size=new Size(115, 46);
+            button3.TabIndex=39;
+            button3.Text="Refresh";
+            button3.UseVisualStyleBackColor=true;
+            button3.Click+=button3_Click;
+            // 
             // DoctorAccount
             // 
             AutoScaleDimensions=new SizeF(8F, 20F);
@@ -332,5 +347,6 @@
         private DataGridViewTextBoxColumn Name;
         private DataGridViewTextBoxColumn Date;
         private DataGridViewButtonColumn View;
+        private Button button3;
     }
 }

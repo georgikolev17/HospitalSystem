@@ -49,6 +49,7 @@ namespace HospitalSystem
                 dataGridView3.Rows.Add(row);
             }
 
+
             var upcomingReviews = this.medicalReviewsBusiness.GetUpcomingMedicalReviewsForPatient(patient.PatientId);
             foreach (var review in upcomingReviews)
             {
@@ -59,6 +60,7 @@ namespace HospitalSystem
                 row.Cells[2].Value = review.Doctor.DoctorType;
                 dataGridView1.Rows.Add(row);
             }
+
         }
 
         private void PatientMenu_Load(object sender, EventArgs e)
@@ -92,6 +94,13 @@ namespace HospitalSystem
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            var patientAccount = new PatientAccount(patient);
+            patientAccount.ShowDialog();
         }
     }
 }

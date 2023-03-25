@@ -73,5 +73,12 @@ namespace HospitalSystem
             this.Dispose();
             loginForm.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            var doctorAccount = new DoctorAccount(doctor);
+            doctorAccount.ShowDialog();
+        }
     }
 }
