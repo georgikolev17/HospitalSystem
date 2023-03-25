@@ -17,6 +17,7 @@ namespace HospitalSystem
         private Doctor doctor;
         private readonly IMedicalReviewsBusiness medicalReviewsBusiness;
         private readonly IUsersBusiness usersBusiness;
+        private Dictionary<int, int> reviewIndices;
 
         public DoctorAccount(Doctor doctor)
         {
@@ -24,6 +25,7 @@ namespace HospitalSystem
             this.doctor = doctor;
             this.medicalReviewsBusiness = new MedicalReviewBusiness();
             this.usersBusiness = new UsersBusiness();
+            this.reviewIndices = new Dictionary<int, int>();
         }
 
 
@@ -47,6 +49,10 @@ namespace HospitalSystem
                 row.Cells[1].Value = review.Date.ToString("dd/MM/yyyy HH:mm");
                 row.Cells[2].Value = "Детайли";
                 dataGridView1.Rows.Add(row);
+                if (reviewIndices.ContainsKey(dataGridView1.Rows.Count-2))
+                    reviewIndices[dataGridView1.Rows.Count-2] = review.MedicalReviewId;
+                else
+                    reviewIndices.Add(dataGridView1.Rows.Count-2, review.MedicalReviewId);
             }
         }
 
@@ -54,7 +60,7 @@ namespace HospitalSystem
         {
             if (e.ColumnIndex == 2)
             {
-                var review = this.medicalReviewsBusiness.FindMedicalReview(doctor.DoctorId, this.usersBusiness.FindPatientByName(dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex-2].Value.ToString()).PatientId);
+                var review = this.medicalReviewsBusiness.FindMedicalReview(reviewIndices[e.RowIndex]);
 
                 var mdeicalReviewForm = new MedicalReview(review);
                 mdeicalReviewForm.ShowDialog();

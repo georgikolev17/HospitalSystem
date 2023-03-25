@@ -11,9 +11,11 @@ namespace Business
         // Returns the schedule of a doctor
         public ICollection<MedicalReview> GetUpcomingMedicalReviewsForDoctor(string email);
 
+        public ICollection<MedicalReview> GetUpcomingMedicalReviewsForPatient(int id);
+
         public ICollection<MedicalReview> GetPastMedicalReviewsForPatient(int patientId);
 
-        public MedicalReview? FindMedicalReview(int doctorId, int patientId);
+        public MedicalReview? FindMedicalReview(int reviewId);
 
         public void EditMedicalReview(int id, string diagnose, string prescription, int patientId);
     }

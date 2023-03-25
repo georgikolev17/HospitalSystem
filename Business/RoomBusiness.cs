@@ -54,7 +54,7 @@ namespace Business
             using ApplicationDbContext dbContext = new ApplicationDbContext();
 
             var room = dbContext.Rooms.FirstOrDefault(x => x.RoomId == roomId);
-            if (room.Taken == true)
+            if (room.Taken == true && room.PatientId != patientId)
             {
                 throw new Exception("Room already taken!");
             }

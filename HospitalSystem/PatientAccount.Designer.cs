@@ -48,15 +48,21 @@
             label16=new Label();
             label17=new Label();
             label18=new Label();
-            dataGridView1=new DataGridView();
             label19=new Label();
-            dataGridView2=new DataGridView();
             label20=new Label();
             button1=new Button();
             button2=new Button();
+            dataGridView3=new DataGridView();
+            dataGridView1=new DataGridView();
+            dataGridViewTextBoxColumn2=new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3=new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn1=new DataGridViewTextBoxColumn();
+            Diagnose=new DataGridViewTextBoxColumn();
+            Date=new DataGridViewTextBoxColumn();
+            Doctor=new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -258,51 +264,28 @@
             label18.TabIndex=19;
             label18.Text="label18";
             // 
-            // dataGridView1
-            // 
-            dataGridView1.BackgroundColor=Color.PaleTurquoise;
-            dataGridView1.BorderStyle=BorderStyle.None;
-            dataGridView1.ColumnHeadersHeightSizeMode=DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location=new Point(12, 372);
-            dataGridView1.Name="dataGridView1";
-            dataGridView1.RowHeadersWidth=51;
-            dataGridView1.RowTemplate.Height=29;
-            dataGridView1.Size=new Size(980, 153);
-            dataGridView1.TabIndex=20;
-            // 
             // label19
             // 
             label19.AutoSize=true;
             label19.Font=new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label19.ForeColor=Color.MediumTurquoise;
-            label19.Location=new Point(404, 338);
+            label19.Location=new Point(416, 506);
             label19.Name="label19";
             label19.Size=new Size(178, 31);
             label19.TabIndex=21;
             label19.Text="PATIENT CARD:";
-            // 
-            // dataGridView2
-            // 
-            dataGridView2.BackgroundColor=Color.PaleTurquoise;
-            dataGridView2.BorderStyle=BorderStyle.None;
-            dataGridView2.ColumnHeadersHeightSizeMode=DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location=new Point(12, 578);
-            dataGridView2.Name="dataGridView2";
-            dataGridView2.RowHeadersWidth=51;
-            dataGridView2.RowTemplate.Height=29;
-            dataGridView2.Size=new Size(980, 92);
-            dataGridView2.TabIndex=22;
             // 
             // label20
             // 
             label20.AutoSize=true;
             label20.Font=new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label20.ForeColor=Color.MediumTurquoise;
-            label20.Location=new Point(404, 544);
+            label20.Location=new Point(375, 309);
             label20.Name="label20";
-            label20.Size=new Size(186, 31);
+            label20.Size=new Size(219, 31);
             label20.TabIndex=23;
-            label20.Text="HOSPITAL STAY:";
+            label20.Text="UPCOMING VISITS:";
+            label20.Click+=label20_Click;
             // 
             // button1
             // 
@@ -330,18 +313,94 @@
             button2.UseVisualStyleBackColor=true;
             button2.Click+=button2_Click;
             // 
+            // dataGridView3
+            // 
+            dataGridView3.BackgroundColor=Color.PaleTurquoise;
+            dataGridView3.BorderStyle=BorderStyle.None;
+            dataGridView3.ColumnHeadersHeightSizeMode=DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView3.Columns.AddRange(new DataGridViewColumn[] { Diagnose, Date, Doctor });
+            dataGridView3.Location=new Point(35, 540);
+            dataGridView3.Name="dataGridView3";
+            dataGridView3.RowHeadersWidth=51;
+            dataGridView3.RowTemplate.Height=29;
+            dataGridView3.Size=new Size(947, 160);
+            dataGridView3.TabIndex=36;
+            dataGridView3.CellContentClick+=dataGridView3_CellContentClick;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor=Color.PaleTurquoise;
+            dataGridView1.BorderStyle=BorderStyle.None;
+            dataGridView1.ColumnHeadersHeightSizeMode=DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn1 });
+            dataGridView1.Location=new Point(35, 343);
+            dataGridView1.Name="dataGridView1";
+            dataGridView1.RowHeadersWidth=51;
+            dataGridView1.RowTemplate.Height=29;
+            dataGridView1.Size=new Size(937, 160);
+            dataGridView1.TabIndex=37;
+            dataGridView1.CellContentClick+=dataGridView1_CellContentClick;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.HeaderText="Date";
+            dataGridViewTextBoxColumn2.MinimumWidth=6;
+            dataGridViewTextBoxColumn2.Name="dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.Resizable=DataGridViewTriState.False;
+            dataGridViewTextBoxColumn2.Width=300;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewTextBoxColumn3.HeaderText="Doctor";
+            dataGridViewTextBoxColumn3.MinimumWidth=6;
+            dataGridViewTextBoxColumn3.Name="dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.Resizable=DataGridViewTriState.False;
+            dataGridViewTextBoxColumn3.SortMode=DataGridViewColumnSortMode.NotSortable;
+            dataGridViewTextBoxColumn3.Width=300;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.HeaderText="Speciality";
+            dataGridViewTextBoxColumn1.MinimumWidth=6;
+            dataGridViewTextBoxColumn1.Name="dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.Width=300;
+            // 
+            // Diagnose
+            // 
+            Diagnose.HeaderText="Diagnose";
+            Diagnose.MinimumWidth=6;
+            Diagnose.Name="Diagnose";
+            Diagnose.Width=300;
+            // 
+            // Date
+            // 
+            Date.HeaderText="Date";
+            Date.MinimumWidth=6;
+            Date.Name="Date";
+            Date.Resizable=DataGridViewTriState.False;
+            Date.Width=300;
+            // 
+            // Doctor
+            // 
+            Doctor.HeaderText="Doctor";
+            Doctor.MinimumWidth=6;
+            Doctor.Name="Doctor";
+            Doctor.Resizable=DataGridViewTriState.False;
+            Doctor.SortMode=DataGridViewColumnSortMode.NotSortable;
+            Doctor.Width=300;
+            // 
             // PatientAccount
             // 
             AutoScaleDimensions=new SizeF(8F, 20F);
             AutoScaleMode=AutoScaleMode.Font;
             BackColor=Color.White;
             ClientSize=new Size(1004, 791);
+            Controls.Add(dataGridView1);
+            Controls.Add(dataGridView3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label20);
-            Controls.Add(dataGridView2);
             Controls.Add(label19);
-            Controls.Add(dataGridView1);
             Controls.Add(label18);
             Controls.Add(label17);
             Controls.Add(label16);
@@ -369,8 +428,8 @@
             Load+=PatientMenu_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -396,11 +455,17 @@
         private Label label16;
         private Label label17;
         private Label label18;
-        private DataGridView dataGridView1;
         private Label label19;
-        private DataGridView dataGridView2;
         private Label label20;
         private Button button1;
         private Button button2;
+        private DataGridView dataGridView3;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn Diagnose;
+        private DataGridViewTextBoxColumn Date;
+        private DataGridViewTextBoxColumn Doctor;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     }
 }

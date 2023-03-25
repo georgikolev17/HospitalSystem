@@ -36,7 +36,7 @@ namespace HospitalSystem
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            var dateForAppointment = DateTime.ParseExact(maskedTextBox1.Text, "dd/MM/yyyy HH:mm",
+            var dateForAppointment = DateTime.ParseExact(maskedTextBox1.Text, "dd.MM.yyyy HH:mm",
                                        System.Globalization.CultureInfo.InvariantCulture); ;
             var doctorForAppointment = comboBox1.Text;
             if (dateForAppointment != null && doctorForAppointment != null)

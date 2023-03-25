@@ -39,13 +39,13 @@ namespace Business
             dbContext.SaveChanges();
         }
 
-        public MedicalReview? FindMedicalReview(int doctorId, int patientId)
+        public MedicalReview? FindMedicalReview(int reviewId)
         {
             using ApplicationDbContext dbContext = new ApplicationDbContext();
             return dbContext.MedicalReviews
                 .Include(x => x.Diagnose)
                 .Include(x => x.Patient)
-                .FirstOrDefault(x => x.DoctorId == doctorId && x.PatientId == patientId);
+                .FirstOrDefault(x => x.MedicalReviewId == reviewId);
         }
 
         public ICollection<MedicalReview> GetPastMedicalReviewsForPatient(int patientId)
@@ -54,7 +54,9 @@ namespace Business
 
             return dbContext.MedicalReviews
                 .Include(x => x.Doctor)
+                .Include(x => x.Diagnose)
                 .Where(x => x.Date < DateTime.Now && patientId == x.PatientId)
+                .OrderByDescending(x => x.Date)
                 .ToList();
         }
 
@@ -69,6 +71,16 @@ namespace Business
                 .Include(x => x.Patient)
                 .ToList();
             return upcomingreviews;
+        }
+
+        public ICollection<MedicalReview> GetUpcomingMedicalReviewsForPatient(int id)
+        {
+            using ApplicationDbContext dbContext = new ApplicationDbContext();
+            return dbContext.MedicalReviews
+                .Include (x => x.Doctor)
+                .Where(x => x.PatientId == id && x.Date > DateTime.Now)
+                .OrderBy(x => x.Date)
+                .ToList();
         }
 
         public bool IsDoctorFreeOnDate(int doctorId, DateTime date)
